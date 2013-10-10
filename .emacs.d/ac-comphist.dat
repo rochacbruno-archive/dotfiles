@@ -1,0 +1,356 @@
+((("strip" .
+   [1 0 0 0 0])
+  ("continue" .
+   [1 0 0 0 0 0 0 0])
+  ("package-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("load-file" .
+   [2 0 0 0 0 0 0 0 0])
+  ("goto-line" .
+   [1 0 0 0 0 0 0 0 0])
+  ("linum-format" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("y-or-n-p" .
+   [0 0 0 0 0 0 0 1])
+  ("yes-or-no-p" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("fset" .
+   [1 0 0 0])
+  ("menu-bar-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("inhibit-startup-message" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("inhibit-default-init" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("skeleton-pair" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("epy-django-snippets" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("epy-setup-ipython" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-linum-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("Exception" .
+   [1 0 0 0 0 0 0 0 0])
+  ("SSEMixin" .
+   [0 0 0 3 0 0 0 0])
+  ("Container" .
+   [0 0 0 1 0 0 0 0 0])
+  ("container" .
+   [2 0 0 0 0 0 0 0 0])
+  ("notify" .
+   [1 0 0 0 0 0])
+  ("tasks" .
+   [1 0 0 0 0])
+  ("opps" .
+   [2 0 0 0])
+  ("except" .
+   [1 0 0 0 0 0])
+  ("try" .
+   [1 0 0])
+  ("patch_list" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("convert_post_to_patch" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("patch" .
+   [2 0 0 0 0])
+  ("user" .
+   [3 0 0 0])
+  ("response_kwargs" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("response_class" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("create_response" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("PlayerResource" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 1])
+  ("team" .
+   [5 0 0 0])
+  ("player_position" .
+   [0 0 0 0 0 0 0 0 0 3 0 0 0 0 0])
+  ("get_position" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("position" .
+   [3 0 0 0 0 0 0 0])
+  ("PLAYER_POSITION" .
+   [0 0 0 1 0 0 0 0 1 0 0 0 0 0 0])
+  ("display_name" .
+   [0 0 0 1 0 0 0 0 0 0 0 0])
+  ("blank" .
+   [1 0 0 0 0])
+  ("null" .
+   [1 0 0 0])
+  ("255" .
+   [1 0 0])
+  ("max_length" .
+   [0 0 0 1 0 0 0 0 0 0])
+  ("models" .
+   [3 0 0 0 0 0])
+  ("lower" .
+   [2 0 0 0 0])
+  ("set_trace" .
+   [2 0 0 0 1 0 0 0 0])
+  ("ipdb" .
+   [8 0 0 0])
+  ("match__id" .
+   [0 0 0 0 0 0 1 0 0])
+  ("True" .
+   [8 0 0 0])
+  ("data" .
+   [21 0 0 0])
+  ("error" .
+   [1 0 0 0 1])
+  ("PostMixin" .
+   [0 0 0 0 2 0 0 0 0])
+  ("cleaned_data" .
+   [0 0 0 1 0 0 0 1 0 0 0 0])
+  ("JSONPResponse" .
+   [0 0 0 0 1 2 0 0 0 0 0 0 0])
+  ("is_valid" .
+   [0 0 0 1 0 0 0 0])
+  ("form_valid" .
+   [2 0 0 0 0 0 0 1 0 0])
+  ("pass" .
+   [6 0 0 0])
+  ("response" .
+   [10 0 0 0 0 0 0 0])
+  ("form" .
+   [13 0 0 0])
+  ("class" .
+   [5 0 0 0 0])
+  ("post" .
+   [3 0 0 0])
+  ("LineupAddView" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("super" .
+   [3 0 0 0 0])
+  ("kwargs" .
+   [2 0 1 1 0 0])
+  ("args" .
+   [3 0 0 0])
+  ("None" .
+   [6 0 0 0])
+  ("else" .
+   [10 0 0 0])
+  ("match" .
+   [10 0 0 1 0])
+  ("obj" .
+   [3 0 0])
+  ("format" .
+   [2 0 0 0 0 0])
+  ("hours" .
+   [1 0 0 0 0])
+  ("import" .
+   [8 0 0 0 0 1])
+  ("slugify" .
+   [0 0 1 0 0 0 0])
+  ("text" .
+   [0 0 0 1])
+  ("django" .
+   [1 0 0 0 0 0])
+  ("from" .
+   [4 0 0 0])
+  ("name" .
+   [3 0 0 0])
+  ("category" .
+   [0 0 0 0 1 0 0 1])
+  ("blackbox" .
+   [0 0 0 1 0 1 0 0])
+  ("self" .
+   [47 0 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("require" .
+   [3 0 0 0 0 0 0])
+  ("def" .
+   [16 0 0])
+  ("banana" .
+   [0 0 1 0 0 0])
+  ("banana2" .
+   [0 0 0 0 1 0 0])
+  ("if" .
+   [21 0])
+  ("print" .
+   [9 0 0 0 0])
+  ("teste" .
+   [2 0 0 1 0])
+  ("setq" .
+   [5 0 0 0])
+  ("x-select-enable-clipboard" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("interprogram-paste-function" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("x-cut-buffer-or-selection-value" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("LineupEditView" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("lineup_delete" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("match_id" .
+   [1 0 0 2 0 0 0 0])
+  ("request" .
+   [14 0 1 1 0 0 5])
+  ("get" .
+   [15 0 0])
+  ("lineup_id" .
+   [0 0 0 0 1 0 0 2 1])
+  ("REQUEST" .
+   [2 0 1 0 0 0 0])
+  ("choices" .
+   [1 0 0 0 0 0 0])
+  ("TEAM_STATUS" .
+   [0 0 1 0 0 0 0 0 0 0 0])
+  ("required" .
+   [3 0 0 0 0 1 0 0])
+  ("False" .
+   [6 0 0 0 0])
+  ("int" .
+   [3 0 0])
+  ("not" .
+   [5 0 0])
+  ("Match" .
+   [0 0 0 1 1])
+  ("and" .
+   [2 0 0])
+  ("return" .
+   [18 0 0 0 0 0])
+  ("HttpResponse" .
+   [0 0 3 0 0 0 0 0 0 0 0 0])
+  ("or" .
+   [1 0])
+  ("qs" .
+   [1 0])
+  ("CSRFExemptMixin" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("LoginRequiredMixin" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("SuccessURLMixin" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("FormView" .
+   [0 0 0 1 0 0 0 0])
+  ("template_name" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("get_initial" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("initial" .
+   [3 0 0 0 0 0 0])
+  ("for" .
+   [1 0 0])
+  ("field" .
+   [3 0 0 1 0])
+  ("in" .
+   [3 0])
+  ("form_class" .
+   [3 0 0 0 0 1 0 0 0 0])
+  ("base_fields" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("keys" .
+   [2 0 0 0])
+  ("GET" .
+   [3 0 0])
+  ("logging" .
+   [2 0 0 0 0 0 0])
+  ("logger" .
+   [1 0 0 1 0 0])
+  ("getLogger" .
+   [0 0 0 0 1 0 0 0 0])
+  ("set_to_manual" .
+   [0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("lineup" .
+   [12 0 0 0 0 0])
+  ("object" .
+   [2 0 0 0 0 1])
+  ("pk" .
+   [1 0])
+  ("errors" .
+   [2 0 0 0 0 1])
+  ("RaceDriverPosition" .
+   [0 0 0 0 1 0 3 0 0 0 1 0 0 0 0 0 0 0])
+  ("admin" .
+   [1 0 0 0 0])
+  ("ModelAdmin" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("search_fields" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("list_filter" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("raw_id_fields" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("list_display" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("RaceDriverPositionAdmin" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("__unicode__" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("order" .
+   [3 0 0 0 0])
+  ("forms" .
+   [1 0 0 0 0])
+  ("CharField" .
+   [0 0 0 0 2 0 0 0 0])
+  ("player" .
+   [7 0 0 0 0 0])
+  ("pos" .
+   [1 0 0])
+  ("ModelResource" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("Meta" .
+   [1 0 0 0])
+  ("queryset" .
+   [0 0 0 0 0 0 0 1])
+  ("objects" .
+   [5 0 0 0 0 0 0])
+  ("all" .
+   [1 0 0])
+  ("resource_name" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("authorization" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("GoalserveAuthorization" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("v1_api" .
+   [0 0 0 1 0 0])
+  ("register" .
+   [0 0 0 0 1 0 0 0])
+  ("RaceDriverPositionResoure" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("tastypie" .
+   [1 0 0 0 0 0 0 0])
+  ("resource" .
+   [0 0 0 0 0 0 0 1])
+  ("ALL_WITH_RELATIONS" .
+   [0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ALL" .
+   [1 0 0])
+  ("bundle" .
+   [7 0 0 1 0 0])
+  ("race" .
+   [1 0 0 0])
+  ("id" .
+   [2 0])
+  ("driver" .
+   [3 0 0 0 0 0])
+  ("now" .
+   [2 0 0])
+  ("contents" .
+   [1 0 0 0 0 0 0 0])
+  ("Content" .
+   [1 0 0 0 0 0 0])
+  ("filters" .
+   [4 0 0 0 0 1 0])
+  ("channel" .
+   [1 0 0 0 0 0 0])
+  ("is_homepage" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("mpath" .
+   [1 0 0 0 0])
+  ("match_time" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("ido" .
+   [1 0 0])
+  ("ido-mode" .
+   [0 0 0 0 0 0 1 0])))
