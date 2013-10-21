@@ -88,6 +88,17 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias e='emacs'
+
+alias omo="find ./ -name '*.pyc' -exec rm -f {} \;"
+alias omo_emacs="find ./ -name '*.*~' -exec rm -f {} \;"
+alias find_in_files='find -type f | xargs grep -l'
+alias is_running='ps aux | grep'
+
+#alias destroy='ps x -o pid,command | grep runserver | grep -v grep | cut -c1-5 | xargs kill'
+function destroy_all(){
+    ps x -o pid,command | grep "$@" | grep -v grep | cut -c1-5 | xargs kill -9
+}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -120,8 +131,6 @@ fi
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
-alias omo="find ./ -name '*.pyc' -exec rm -f {} \;"
 
 
 # path the the newly checked out project. I used ~/src
@@ -217,9 +226,9 @@ function set_prompt() {
        _dirname=$_pwd
     else
        _dirname=`dirname "$_pwd" `
-        if [[ $_dirname == "/" ]]; then
-              _dirname=""
-        fi
+	if [[ $_dirname == "/" ]]; then
+	      _dirname=""
+	fi
        _dirname="$_dirname/`basename "$_pwd"`"
     fi
     path="${LC}${_dirname}${NIL}"
@@ -228,7 +237,7 @@ function set_prompt() {
     # Dirtiness from:
     # http://henrik.nyh.se/2008/12/git-dirty-prompt#comment-8325834
     if git update-index -q --refresh 2>/dev/null; git diff-index --quiet --cached HEAD --ignore-submodules -- 2>/dev/null && git diff-files --quiet --ignore-submodules 2>/dev/null
-        then dirty=""
+	then dirty=""
     else
        dirty="${RED}*${NIL}"
     fi
@@ -245,7 +254,7 @@ function set_prompt() {
     # Virtual Env
     if [[ $VIRTUAL_ENV != "" ]]
        then
-           venv=" ${RED}(${VIRTUAL_ENV##*/})"
+	   venv=" ${RED}(${VIRTUAL_ENV##*/})"
     else
        venv=''
     fi
@@ -275,4 +284,3 @@ function marks {
 }
 
 source $HOME/.django_bash_completion.sh
-

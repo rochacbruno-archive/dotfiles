@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/.emacs.d/")
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 (load-file "/home/rochacbruno/.emacs.d/emacs-for-python/epy-init.el")
@@ -14,6 +15,46 @@
 (column-number-mode 1)
 ;;; disable auto pairing parentesis
 (setq skeleton-pair nil)
+
+(require 'vline)
+
+(require 'fill-column-indicator)
+(setq fci-rule-width 1)
+(setq fci-rule-color "darkblue")
+;;(setq fci-rule-column 80)
+;;(setq-default fci-rule-column 80)
+;;(add-hook 'python-mode-hook ))
+
+
+(setq-default fci-rule-column 80)
+(setq fci-handle-truncate-lines nil)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+(defun auto-fci-mode (&optional unused)
+   (if (> (window-width) fci-rule-column)
+      (fci-mode 1)
+      (fci-mode 0))
+ )
+ (add-hook 'after-change-major-mode-hook 'auto-fci-mode)
+ (add-hook 'window-configuration-change-hook 'auto-fci-mode)
+
+
+;; (require 'column-marker)
+;;(add-hook 'python-mode-hook (lambda () (interactive) (column-marker-2 80)))
+
+
+;; whitespace-mode
+;; free of trailing whitespace and to use 80-column width, standard indentation
+;;(setq whitespace-style '(trailing lines space-before-tab
+;;				  indentation space-after-tab)
+;;      whitespace-line-column 80)
+
+;; (let ((whitespace-line-column 80)       ;80 is the default
+;;      (whitespace-style '(lines-tail))) ;or '(lines) for the whole line
+;;      (whitespace-mode 1))
+
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 (require 'ido)
 (ido-mode t)
@@ -86,7 +127,19 @@
 (require 'package)
 (package-initialize)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+			 ("marmalade" . "http://marmalade-repo.org/packages/")
+			 ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; (load-file "~/.emacs.d/themes/zenburn-theme.el")
+
+
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
