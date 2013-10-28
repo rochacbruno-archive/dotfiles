@@ -106,6 +106,15 @@
 ;;; change yes-or-no to simply y or n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+
+(add-hook 'before-save-hook
+    (lambda ()
+	(when buffer-file-name
+	    (let ((dir (file-name-directory buffer-file-name)))
+		(when (and (not (file-exists-p dir))
+		    (y-or-n-p (format "Directory %s does not exist. Create it?" dir)))
+		   (make-directory dir t))))))
+
 ;;; key bindings
 
 (global-set-key (kbd "C-c u") 'undo)
