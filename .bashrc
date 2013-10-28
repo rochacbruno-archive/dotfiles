@@ -120,7 +120,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#export TERM="xterm-256color"
+export TERM="xterm-256color"
 
 # function _update_ps1() {
 #    export PS1="$(~/powerline-shell.py $?)"
