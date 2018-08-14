@@ -1,0 +1,11 @@
+[user]
+	name = Bruno Rocha
+	email = rochacbruno@gmail.com
+[color]
+	ui = true
+[push]
+	default = simple
+[alias]
+	hist = log --decorate --graph --pretty=oneline --abbrev-commit --all
+[core]
+excludesfile = ~/.gitignore

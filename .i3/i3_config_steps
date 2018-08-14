@@ -1,0 +1,154 @@
+sudo mount -t nfs 192.168.1.33:/ /mnt/other
+----
+
+install packages
+----------------
+sudo dnf update -y
+sudo dnf install i3 i3status dmenu dunst i3lock xbacklight feh conky nitrogen py3status lxappearance gtk-murrine-engine
+sudo dnf install links irssi mc glances flatpak git ansible libreoffice quassel numlockx
+sudo dnf install inkscape gimp audacity docker docker-compose copyq kupfer
+sudo dnf install virt-manager libvirt libvirt-bash-completion
+sudo dnf install qemu qemu-kvm qemu-img qemu-common libvirt-daemon-driver-qemu ipxe-roms-qemu qemu-guest-agent qemu-system-x86
+sudo dnf group install --with-optional virtualization
+sudo dnf install httpie lynx youtube-dl ncdu nmap optipng pass qtpass tree xclip
+sudo dnf install cabextract lzip p7zip p7zip-plugins
+sudo dnf install autoconf automake clang clang-devel cmake cpp ctags devhelp 
+sudo dnf install gcc meld npm patch ripgrep the_silver_searcher tmate tmux wget curl
+sudo dnf install xfce4-calculator-plugin xfce4-datetime-plugin xfce4-equake-plugin 
+sudo dnf install xfce4-pulseaudio-plugin xfce4-volumed xfce4-xkb-plugin
+sudo dnf install adapta-gtk-theme numix-gtk-theme deepin-gtk-theme
+sudo dnf install xfce4-mixer shotwell pavucontrol
+sudo dnf install geany geany-plugins-addons
+sudo dnf copr enable yaroslav/i3desktop
+sudo dnf install rofi compton
+sudo dnf install gnome-calculator
+sudo dnf install adobe-source-code-pro-fonts powerline-fonts
+
+sudo systemctl start libvirtd
+
+Config Switch Hosts
+https://github.com/oldj/SwitchHosts/releases
+https://github.com/oldj/SwitchHosts
+
+
+fonts
+-----
+mkdir -p ~/Projects/misc
+cd ~/Projects/misc
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+
+Install micro
+-----------
+mkdir ~/bin
+cd ~/bin
+curl https://getmic.ro | bash
+
+
+Install flathub packages
+------------------------
+
+enable flathub repo  https://flathub.org/repo/flathub.flatpakrepo
+   
+  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+install
+   sudo flatpak install flathub org.telegram.desktop -y
+   sudo flatpak install flathub com.spotify.Client -y
+   sudo flatpak install flathub org.videolan.VLC -y
+   sudo flatpak install flathub org.kde.kdenlive -y
+   sudo flatpak install flathub com.obsproject.Studio -y
+   
+
+create ~/bin/flatrun script
+
+#!/bin/bash
+APPLICATION="$1";
+flatpak run $APPLICATION
+
+create apps
+
+echo -e '#!/bin/bash\nflatpak run org.telegram.desktop' > ~/bin/telegram
+echo -e '#!/bin/bash\nflatpak run com.spotify.Client' > ~/bin/spotify
+echo -e '#!/bin/bash\nflatpak run org.videolan.VLC' > ~/bin/vlc
+echo -e '#!/bin/bash\nflatpak run org.kde.kdenlive' > ~/bin/kdenlive
+echo -e '#!/bin/bash\nflatpak run com.obsproject.Studio' > ~/bin/obs
+
+chmod +x ~/bin/*
+
+
+Install custom repo apps
+------------------------
+ffmpeg
+======
+
+
+vscode
+======
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+sudo dnf install code
+
+rust
+====
+
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+
+config permissions
+------------------
+https://www.reddit.com/r/i3wm/comments/3dub5d/how_to_start_polkit/
+
+
+sudo groupadd docker
+sudo usermod --append --groups libvirt `whoami`
+sudo usermod --append --groups docker `whoami`
+sudo systemctl start docker
+
+
+Services
+---------
+
+- Disable selinux
+- Disable firewalld
+
+
+git
+---
+
+set git credentials
+set git aliases
+
+Config keyboard
+-----------------
+
+    localectl set-keymap us-intl
+    localectl set-x11-keymap us intl
+    setxkbmap -layout us -variant intl
+
+2) Config /etc/X11/xorg.conf
+
+Section "Device"
+	Identifier "Intel Graphics"
+	Driver	   "Intel"
+	Option     "Backlight"  "intel_backlight"
+EndSection
+
+
+3) Create config file
+
+~/.i3/config
+~/.i3/i3status.conf
+Thunar/uca
+Quassel
+
+# config zsh
+
+setopt +o nomatch
+
+# default apps
+
+xdg-settings set default-web-browser firefox.desktop

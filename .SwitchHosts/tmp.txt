@@ -1,0 +1,21 @@
+# SwitchHosts!
+
+127.0.0.1		localhost.localdomain localhost
+10.8.0.99               sesame
+::1		localhost6.localdomain6 localhost6
+
+10.8.244.46       nodepool
+10.8.48.107       jenkins
+
+# VMS
+
+192.168.122.150    fedora-27-base
+
+# fedora_27_pulp_2
+192.168.122.250    fedora-27-pulp-2
+
+# rhel75_base
+192.168.122.210    rhel-75-base
+
+# rhel_75_pulp_2
+192.168.122.178    rhel-75-pulp-2

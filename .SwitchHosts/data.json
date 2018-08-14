@@ -1,0 +1,54 @@
+{
+  "list": [{
+    "id": "1533590834282-231267",
+    "title": "default",
+    "content": "127.0.0.1\t\tlocalhost.localdomain localhost\n10.8.0.99               sesame\n::1\t\tlocalhost6.localdomain6 localhost6\n\n10.8.244.46       nodepool\n10.8.48.107       jenkins",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": []
+  }, {
+    "id": "1533590834282-591089",
+    "title": "fedora27_base",
+    "content": "# VMS\n\n192.168.122.150    fedora-27-base",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": []
+  }, {
+    "id": "1533601017163-940947",
+    "title": "fedora_27_pulp_2",
+    "content": "# fedora_27_pulp_2\n192.168.122.250    fedora-27-pulp-2",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": []
+  }, {
+    "id": "1533601052181-571267",
+    "title": "rhel75_base",
+    "content": "# rhel75_base\n192.168.122.210    rhel-75-base",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": []
+  }, {
+    "id": "1533602514116-903300",
+    "title": "rhel_75_pulp_2",
+    "content": "# rhel_75_pulp_2\n192.168.122.178    rhel-75-pulp-2",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": []
+  }],
+  "version": [3, 3, 12, 5349]
+}
