@@ -1,6 +1,12 @@
 sudo mount -t nfs 192.168.1.33:/ /mnt/other
 ----
 
+Delta RPMs
+--------
+/etc/dnf/dnf.conf
+fastestmirror=true
+deltarpm=true
+
 install packages
 ----------------
 sudo dnf update -y
@@ -21,14 +27,62 @@ sudo dnf install xfce4-mixer shotwell pavucontrol
 sudo dnf install geany geany-plugins-addons
 sudo dnf copr enable yaroslav/i3desktop
 sudo dnf install rofi compton
-sudo dnf install gnome-calculator
+sudo dnf install gnome-calculator cheese mediawriter
 sudo dnf install adobe-source-code-pro-fonts powerline-fonts
-
 sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
 
 Config Switch Hosts
 https://github.com/oldj/SwitchHosts/releases
 https://github.com/oldj/SwitchHosts
+
+
+Fusion?
+------
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+#sudo dnf install -y guvcview chromium rhythmbox kdenlive gimp tlp vlc audacity obs-studio handbrake ntfs-3g fuse-exfat
+sudo dnf install -y guvcview tlp tlp-rdw vlc handbrake ntfs-3g fuse-exfat
+sudo dnf install telegram-desktop vlc
+
+#Enable tlp (battery saver)
+sudo dnf install tlp tlp-rdw
+sudo systemctl enable tlp
+sudo tlp start; sudo systemctl enable tlp
+
+# codecs
+sudo dnf install \
+gstreamer1-plugins-bad-free \
+gstreamer1-plugins-bad-freeworld \
+gstreamer1-plugins-bad-nonfree \
+gstreamer1-plugins-base \
+gstreamer1-plugins-good \
+gstreamer1-plugins-good-gtk \
+gstreamer1-plugins-ugly \
+gstreamer1-plugins-ugly-free
+
+
+$ sudo dnf install \
+gstreamer-plugins-base \
+gstreamer1-plugins-base \
+gstreamer-plugins-bad \
+gstreamer-plugins-ugly \
+gstreamer1-plugins-ugly \
+gstreamer-plugins-good-extras \
+gstreamer1-plugins-good \
+gstreamer1-plugins-good-extras \
+gstreamer1-plugins-bad-freeworld \
+ffmpeg \
+gstreamer-ffmpeg\
+flash-plugin
+
+
+ffmpeg
+sudo dnf install youtube-dl vlc
+
+# tools
+sudo dnf install sysstat htop glances
+sudo dnf install flameshot
+sudo dnf group install "C Development Tools and Libraries"
 
 
 fonts
@@ -54,12 +108,9 @@ enable flathub repo  https://flathub.org/repo/flathub.flatpakrepo
   sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 install
-   sudo flatpak install flathub org.telegram.desktop -y
    sudo flatpak install flathub com.spotify.Client -y
-   sudo flatpak install flathub org.videolan.VLC -y
    sudo flatpak install flathub org.kde.kdenlive -y
    sudo flatpak install flathub com.obsproject.Studio -y
-   
 
 create ~/bin/flatrun script
 
@@ -69,9 +120,7 @@ flatpak run $APPLICATION
 
 create apps
 
-echo -e '#!/bin/bash\nflatpak run org.telegram.desktop' > ~/bin/telegram
 echo -e '#!/bin/bash\nflatpak run com.spotify.Client' > ~/bin/spotify
-echo -e '#!/bin/bash\nflatpak run org.videolan.VLC' > ~/bin/vlc
 echo -e '#!/bin/bash\nflatpak run org.kde.kdenlive' > ~/bin/kdenlive
 echo -e '#!/bin/bash\nflatpak run com.obsproject.Studio' > ~/bin/obs
 
@@ -152,3 +201,14 @@ setopt +o nomatch
 # default apps
 
 xdg-settings set default-web-browser firefox.desktop
+
+
+# zsh auto sug
+https://github.com/zsh-users
+https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+
+
+# to evaluate: https://github.com/sorin-ionescu/prezto

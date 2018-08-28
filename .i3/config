@@ -111,7 +111,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### Launcher ###
-set $mode_launcher Firefox(f),Telegram(t),Thunar(n),Chrome(g),Virt(v)
+set $mode_launcher Firefox(f),(t),Thunar(n),Chrome(g),Virt(v)
 mode "$mode_launcher" {
     bindsym f exec firefox, mode "default"
     bindsym t exec telegram, mode "default"
@@ -323,7 +323,7 @@ bindsym $mod+n exec --no-startup-id thunar
 # criteria scratchpad launchers
 bindsym F9 [class="quassel"] scratchpad show
 bindsym F8 [title="^botes$"] scratchpad show
-bindsym F7 [title="^Telegram"] scratchpad show
+bindsym F7 [instance="telegram-desktop"] scratchpad show
 bindsym F6 [title="^Bluejeans$"] scratchpad show
 
 # GUAKE
@@ -338,7 +338,9 @@ bindsym F12 exec --no-startup-id xfce4-terminal --drop-down
 
 for_window [instance="feh"] floating enable
 for_window [instance="arandr"] floating enable
-for_window [instance="Telegram"] floating enable
+for_window [instance="telegram-desktop"] floating enable
+for_window [instance="camdesk"] floating enable
+for_window [instance="vlc"] floating enable; resize set 800 600
 for_window [title="CopyQ"] floating enable
 for_window [title="^Google+ Hangouts is sharing your screen"] floating enable
 for_window [title="SwitchHosts!"] floating enable
@@ -376,7 +378,7 @@ for_window [class="(?i)xfce4-mixer"] floating enable, move position mouse, move 
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse, move down 30 px
 
 for_window [title="^botes$"] move scratchpad
-for_window [title="^Telegram"] move scratchpad
+for_window [instance="telegram-desktop"] move scratchpad
 
 # Switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
